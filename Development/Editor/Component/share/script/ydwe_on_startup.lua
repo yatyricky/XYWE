@@ -91,12 +91,12 @@ local function get_war3_version_from_script()
 			return war3_version, err
 		end
 		mpq:close()
-		
+
 		local s, e = io.load(common_j_path)
-		if not s then			
+		if not s then
 			return war3_version, e
 		end
-		
+
 		if s:find("StringHash") then
 			return war3_version:new(), nil
 		else
@@ -160,9 +160,11 @@ function event.EVENT_WE_START(event_data)
 	log.debug("********************* on startup start *********************")
 	
 	-- 读取版本
+	xywe_version = "[[VersionName@ANSI]] [[Version]]"
 	ydwe_version = sys.version { file = fs.ydwe_path() / "ydwe.exe" }
 	war3_version = sys.war3_version { file = fs.war3_path() / "game.dll" }
 
+	log.debug("xywe version " .. tostring(xywe_version))
 	log.debug("ydwe version " .. tostring(ydwe_version))
 	log.debug("war3 version " .. tostring(war3_version))
 	
@@ -192,7 +194,7 @@ function event.EVENT_WE_START(event_data)
 	-- 载入注入代码配置
 	inject_code:initialize()
 	native:initialize()
-		
+
 	set_triggereditor_color()
 
 	-- 显示感谢信息

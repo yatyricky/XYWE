@@ -36,6 +36,18 @@
 #    include "AntiBJLeak/MainMacro.h"
 #  endif
 #
+#  include "Lua/SetBackGroundMusic.h"
+#  include "WM/Base/GeneralDefine.h"
+#  if WARCRAFT_VERSION >= 124
+#
+# 	 include "WM/Base/124define.h"
+#
+#  else
+#
+# 	 include "WM/Base/120define.h" 
+#
+#  endif
+#
 #  define YDWESaveTriggerName(t,s) DoNothing()
 #
 #  include <YDTrigger/Common/switch.h>

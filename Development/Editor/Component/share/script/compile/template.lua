@@ -1,8 +1,12 @@
+require "compile.ejass"
 
 local select=select
+local setfenv=setfenv
 local load=load
 local string=string
 local table=table
+local stormlib = ar.stormlib
+local ejass=false
 
 local function result(...)
 	return select("#",...), select(1,...)
@@ -14,7 +18,10 @@ local function precompile(code, output_func, lua_codes)
 	end
 	local start_tag = '<?'
 	local end_tag = '?>'
-	
+	if string.find(code,"//! ejass",1,true) then--是否开启ejass处理
+		ejass=true
+		string.gsub(code,"//! ejass","")
+	end
 	local start1, end1 = string.find(code, start_tag, 1, true)
 	local start2 = nil
 	local end2 = 0
@@ -45,7 +52,9 @@ end
 local function map_file_import(path_in_archive)
 	return function (buf, is_path)		
 		if is_path then
-			__map_handle__:import(path_in_archive, __map_path__:parent_path() / buf)
+			-- Think Unlock Comment after DEBUG
+			-- __map_handle__:import(path_in_archive, __map_path__:parent_path() / buf)
+			mpq_util:import_file(__map_handle__, __map_path__:parent_path() / buf, path_in_archive)
 			return
 		else
 			local temp_file_path = fs.ydwe_path() / "logs" / "import" / path_in_archive
@@ -54,7 +63,9 @@ local function map_file_import(path_in_archive)
 				log.error("failed: save " .. temp_file_path:string())
 				return
 			end
-			__map_handle__:import(path_in_archive, temp_file_path)
+			-- Think Unlock Comment after DEBUG
+			-- __map_handle__:import(path_in_archive, temp_file_path)
+			mpq_util:import_file(__map_handle__, temp_file_path, path_in_archive)
 			return
 		end
 	end
@@ -65,7 +76,7 @@ local function string_hash(str)
 end
 
 template = {}
-	
+
 function template:do_compile(op)
 	local code, err = io.load(op.input)
 	if not code then
@@ -73,10 +84,10 @@ function template:do_compile(op)
 		return false, err
 	end
 	
-	local lua_codes = {''}
+	local lua_codes = {''} -- lua代码
 	table.insert(lua_codes, "local __jass_result__ = {''}")
 	table.insert(lua_codes, "local function __jass_output__(str) table.insert(__jass_result__, str) end")
-	local r, err = pcall(precompile, code, '__jass_output__', lua_codes)
+	local r, err = pcall(precompile, code, '__jass_output__', lua_codes) -- precompile处理
 	if not r then
 		return r, err
 	end
@@ -96,8 +107,8 @@ end
 
 function template:compile(op)
 	log.trace("Template compilation start.")
-	op.output = fs.ydwe_path() / "logs" / "lua_processed.j"
-	local success, content = self:do_compile(op)
+	op.output = fs.ydwe_path() / "logs" / "lua_processed.j" -- j文件路径，应该是被lua处理后保存的
+	local success, content = self:do_compile(op) -- 加载j文件
 	if not success then
 		if content then
 			gui.message_dialog(nil, content, _("Error"), gui.MB_ICONERROR | gui.MB_OK)
@@ -107,8 +118,10 @@ function template:compile(op)
 		log.error("Template error processing: " .. tostring(content))
 		return false
 	end
-
-	local result, err = io.save(op.output, content)
+	if ejass then
+		content=ejass_compile(content)
+	end
+	local result, err = io.save(op.output,content)
 	if not result then
 		log.error("Template write " .. op.output:string() .. ". Error: " .. err)
 		return false
