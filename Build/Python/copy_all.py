@@ -23,17 +23,17 @@ def copy_boost_dll(name, msvc_version, configuration):
     else:
         filename = 'boost_' + name + '-vc' + str(msvc_version) + '-mt-gd-' + get_boost_version() + '.dll'
     fs.copy_file(path['OpenSource'] / 'Boost' / 'stage' / 'lib' / filename, path['ResultCore'] / filename)
-    
+
 def copy_lib_dll(name, configuration, version = 'Current'):
     fs.copy_directory(path['OpenSource'] / name / version / 'bin' / 'Win32' / configuration, path['ResultCore'], ['.dll'])
-    
+
 def copy_lua_script():
     fs.copy_directory(path['Development'] / 'Editor' / 'Core' / 'Script' / 'lua', path['Result'] / 'share' / 'script', ['.lua'])
 
 def copy_boost_preprocessor():
     fs.copy_directory(path['OpenSource'] / 'Boost' / 'boost' / 'preprocessor', path['ResultPlugin'] / 'wave' / 'include' / 'boost' / 'preprocessor')
     fs.copy_file(path['OpenSource'] / 'Boost' / 'boost' / 'preprocessor.hpp', path['ResultPlugin'] / 'wave' / 'include' / 'boost' / 'preprocessor.hpp')
-    
+
 def copy_component():
     fs.copy_directory(path['Development'] / 'Editor' / 'Component', path['Result'])
 

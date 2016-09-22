@@ -1,0 +1,15 @@
+WESTRING_ABOUTTITLE=关于咸鱼地图编辑器
+WESTRING_ABOUT_VERSION=版本：咸鱼降临
+WESTRING_ABOUT_COPYRIGHT=Wow9.Org 出品
+WESTRING_ABOUT_LINK=Blizzard Entertainment, 月协, 咸鱼窝
+
+WESTRING_LICENSETITLE=咸鱼地图编辑器 - 最终用户协议
+WESTRING_LICENSE_AGREE=同意
+WESTRING_LICENSE_DISAGREE=拒绝
+WESTRING_LICENSE_DOYOUAGREE=您是否同意以上用户协议？
+
+WESTRING_WELCOMETITLE=欢迎使用咸鱼地图编辑器（XYWE）
+WESTRING_WELCOME_LARGETEXT=咸鱼地图编辑器：咸鱼降临
+WESTRING_WELCOME_SMALLTEXT1="XYWE是鱼妹窝（Wow9.Org）出品的，基于月协出品的YDWE 1.28二次开发的针对魔兽争霸3 1.24E版本的增强魔兽地图编辑器。"
+WESTRING_WELCOME_SMALLTEXT2="XYWE致力于降低开发魔兽地图的门槛，让地图作者能专注创作而非受限于技术。如果你有想要的但是无法轻易自己制作出的系统，可以反馈到Wow9.Org，我们会考虑添加这些系统。"
+WESTRING_WELCOME_LEGALTEXT="XYWE的设计原则是为不同地图量身定制不同的UI，请勿向我们反馈UI不兼容的问题。XYWE的制作团队不是WE义务教学团队，我们不负责教新手如何使用WE。"

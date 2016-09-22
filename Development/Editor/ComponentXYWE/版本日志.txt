@@ -1,0 +1,93 @@
+咸鱼降临:1.01.Alpha.2
+	合并YDWE在2016.9.21夜晚的Github更新
+		YDWE/example(演示地图)/JAPI/lua/blizzard.lua的编码更换为UTF8
+		YDWE/example(演示地图)/JAPI/lua/main.lua的编码更换为UTF8
+		Lua引擎的sleep功能由默认开启改为默认关闭
+		Lua引擎的libs_package的符号现在使用文件形式
+		为Lua引擎集成调试器
+	增加部分来自WMUI的物体编辑器文本描述及属性Tip
+
+咸鱼降临:1.01.Alpha.1 2016-9-21 23:07:29
+	修复WMUI中SetJassLocalVariables无法正常使用的BUG
+	更新 YDWE 版本到 1.30.2
+	延伸自上一条，XYWE现在可以支持1.27的魔兽争霸3
+	新增了部分YDWE的JAPI函数，这些函数会在下一个版本中整理
+	修复部分函数无法正常使用的BUG
+
+咸鱼降临:1.01.Alpha.0 2016-9-20 21:23:18
+	更新 YDWE 版本到 1.29.4
+	新整合 1.3.4 版本的 WMUI, LuaWE, eJass
+	对各触发函数UI进行排版以及描述优化
+	基础MPQ文件夹的名字恢复为ydwe
+	删除Wow9.Org的网站快捷方式
+	将 LuaWE, WMUI 及 YDWE 的文档重新放到目录中
+	临时关闭UI库管理器和代码库管理器的入口
+
+咸鱼降临:1.00.Beta.1 2016-7-26 23:37:33
+	整合了DYC UI 1.03
+	优化了DYC UI 1.03的文本描述
+	基础MPQ文件夹的名字从ydwe改为base
+	触发器默认会创建一个"地图初始化"目录、一个名字为"地图初始化"的触发器并且包含事件"地图初始化"
+	恢复了YDWE的感谢信息内容
+
+咸鱼降临:1.00.Beta.0 2016-7-25 23:06:56
+	将YDWE的逆天UI合并到了YDWE的基础UI中
+	移除了所有咸鱼函数库，这些函数库将会在后续由零件系统的方式逐渐回归
+	移除了根目录下的说明文档
+	修复了默认的触发器提示信息
+	删除了地图模板、演示地图等文件夹
+	新增了随机WE使用Tip
+	移除了初始触发器
+	为原版UI和额外的UI添加前缀用以区分，YDWE的所有拓展UI默认使用[YDWE]前缀，除非找到了其出处
+	取消了进入WE时的英文问候
+	优化了部分UI的描述文本
+
+咸鱼降临:1.00.Alpha.4 2016-7-22 02:48:41
+	咸鱼WE
+		触发器
+			新增条件：判断玩家组
+		名字
+			去掉YD WorldEdit，改为咸鱼地图编辑器
+			版本号更新为 咸鱼降临:1.00.Alpha.4
+		问候
+			进入游戏时YDWE的感谢名单改为随机问候
+	重做 咸鱼地图编辑器（启动器） 咸鱼代码库管理器，咸鱼UI库管理器
+		系统内置UI：ydwe ydtrigger xywe_utf8 xywe_ansi
+		新增UI库的排序功能
+		新增启动器的编辑器Tip
+	咸鱼函数库
+		GUI
+			修复使用 [咸鱼]单位-创建一个单位在指定点并发布目标点命令 会造成XYWE崩溃的BUG。
+		Code
+			XYHashSavePlayer -> 从保存玩家Handle改为保存玩家ID（直接保存玩家Handle有不明BUG）
+			XYHashLoadPlayer -> 从读取玩家Handle改为读取玩家ID并转换为玩家Handle再返回
+			XYUnitPerTimeCreateUnitAtLocationOrderLocation -> 修复只能创建创建第一个单位的BUG
+		注入
+			现在XYWE会自动将咸鱼函数库中的代码注入到地图中，不再需要手动复制
+
+1.00.Alpha.3 - 2016-7-7 15:02:41
+	删除文件 【触发器】【UI】【custom】保存更改的编辑.bat
+	删除文件 【触发器】【UI】【custom】编辑动作或函数.bat
+	删除文件 【触发器】【UI】【custom】编辑动作或函数的分类.bat
+	删除文件 【触发器】【UI】编辑配置表.bat
+	增加文件 【触发器】【UI】咸鱼UI管理器.exe
+	增加目录 我的地图
+	改名 【XYWE】【官方网站】咸鱼维基 -> 【XYWE】【官方网站】咸鱼维基：XYWE
+	更新咸鱼函数库 1.00.2
+		* 改名 XYHashSaveStr -> XYHashSaveString
+		* 改名 XYHashLoadStr -> XYHashLoadString
+		* 新增 library XYUnit
+	更新模板地图 Template.Alpha.w3x
+
+1.00.Alpha.2 - 2016-7-6 10:26:00
+	修复无法预处理的BUG
+		删除XYWE版本号中的空格，使用“.”作为连接符
+	增加官网和QQ群快捷链接
+	增加提示信息
+
+1.00 Alpha - 2016-7-6 04:00:00
+	修改YDWE 1.28.6各种信息以组合成XYWE
+	集成基础模板地图
+	集成咸鱼函数库（含UI） 1.00
+	集成各种bat工具和提示信息
+	集成WorldEditorTriggerCustomer（魔兽触发定制器）

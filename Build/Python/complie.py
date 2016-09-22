@@ -12,7 +12,7 @@ def run_bat(bat_path, cmd=None):
         cmd = str(bat_path)
     else:
         cmd = '"' + str(bat_path) + '" ' + cmd
-        
+
     p = subprocess.Popen(cmd, cwd=str(bat_path.parent_path()), stdin=open(os.devnull), stderr=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     for line in p.stdout.readlines():
         print(line)

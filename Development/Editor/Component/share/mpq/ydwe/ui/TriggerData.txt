@@ -19,37 +19,36 @@
 		TC_FORLOOP=WESTRING_TRIGCAT_FORLOOP,ReplaceableTextures\WorldEditUI\Actions-Logical,1
 		TC_LAST=WESTRING_TRIGCAT_LAST,ReplaceableTextures\WorldEditUI\Actions-SetVariables,1
 	// WM
-		TM_WM_Lua=[WMUI]LUA,ReplaceableTextures\CommandButtons\BTNOrbOfDeath.blp
-		TC_WM_AntiCheat=[WMUI]反作弊,ReplaceableTextures\CommandButtons\BTNCancel.blp
-		TC_WM_Phrevski=[WMUI]文明,ReplaceableTextures\CommandButtons\BTNHealingWave.blp
-		TC_WM_LocalVariable=[WMUI]真局部变量,ReplaceableTextures\CommandButtons\BTNHolyBolt.blp
-		TC_WM_JAPI=[WMUI]JAPI,ReplaceableTextures\CommandButtons\BTNSirenMaster.blp
-		TC_WM_SYSTEM=[WMUI]系统,ReplaceableTextures\CommandButtons\BTNHealingWave.blp
-		TC_WM_UNIT=[WMUI]单位,ReplaceableTextures\WorldEditUI\Actions-Unit
-		TC_WM_CINEMATIC=[WMUI]电影,ReplaceableTextures\WorldEditUI\Actions-Unit
+		TC_WM_Lua=WESTRING_TRIGCAT_WM_Lua,ReplaceableTextures\CommandButtons\BTNOrbOfDeath.blp
+		TC_WM_AntiCheat=WESTRING_TRIGCAT_WM_AntiCheat,ReplaceableTextures\CommandButtons\BTNCancel.blp
+		TC_WM_Phrevski=WESTRING_TRIGCAT_WM_Phrevski,ReplaceableTextures\CommandButtons\BTNHealingWave.blp
+		TC_WM_LocalVariable=WESTRING_TRIGCAT_WM_LocalVariable,ReplaceableTextures\CommandButtons\BTNHolyBolt.blp
+		TC_WM_JAPI=WESTRING_TRIGCAT_WM_JAPI,ReplaceableTextures\CommandButtons\BTNSirenMaster.blp
+		TC_WM_SYSTEM=WESTRING_TRIGCAT_WM_SYSTEM,ReplaceableTextures\CommandButtons\BTNHealingWave.blp
+		TC_WM_UNIT=WESTRING_TRIGCAT_WM_UNIT,ReplaceableTextures\WorldEditUI\Actions-Unit
+		TC_WM_CINEMATIC=WESTRING_TRIGCAT_WM_CINEMATIC,ReplaceableTextures\WorldEditUI\Actions-Unit
 	// DYC 1.03
-		TC_DYC_NOTHING=[DYC]无,ReplaceableTextures\CommandButtons\BTNPillage.blp,1
-		TC_DYC_ABI_SYS=[DYC]技能&系统,ReplaceableTextures\CommandButtons\BTNPriestMaster.blp
-		TC_DYC_EVENT=[DYC]事件,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
-		TC_DYC_UNIT=[DYC]单位,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
-		TC_DYC_LIGHTNING=[DYC]闪电效果,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
-		TC_DYC_EVENTRESPONSE=[DYC]事件响应,ReplaceableTextures\CommandButtons\BTNBerserkForTrolls.blp
-		TC_DYC_MATH=[DYC]数学,ReplaceableTextures\WorldEditUI\Actions-Logical
+		TC_DYC_NOTHING=WESTRING_TRIGCAT_DYC_NOTHING,ReplaceableTextures\CommandButtons\BTNPillage.blp,1
+		TC_DYC_ABI_SYS=WESTRING_TRIGCAT_DYC_ABI_SYS,ReplaceableTextures\CommandButtons\BTNPriestMaster.blp
+		TC_DYC_EVENT=WESTRING_TRIGCAT_DYC_EVENT,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
+		TC_DYC_UNIT=WESTRING_TRIGCAT_DYC_UNIT,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
+		TC_DYC_LIGHTNING=WESTRING_TRIGCAT_DYC_LIGHTNING,ReplaceableTextures\CommandButtons\BTNDarkRitual.blp
+		TC_DYC_EVENTRESPONSE=WESTRING_TRIGCAT_DYC_EVENTRESPONSE,ReplaceableTextures\CommandButtons\BTNBerserkForTrolls.blp
+		TC_DYC_MATH=WESTRING_TRIGCAT_DYC_MATH,ReplaceableTextures\WorldEditUI\Actions-Logical
 	// 逆天
-		TC_YD_BEYONDFATE=[YDWE]逆天,ReplaceableTextures\CommandButtons\BTNInfernal.blp
-		TC_YD_LOCALVARIABLE=[YDWE]变量,ReplaceableTextures\WorldEditUI\Editor-ScriptVariable.blp,1
-			// 1: 隐藏所有普通YDWE UI中的 [YDWE]变量 函数
+		TC_YD_BEYONDFATE=WESTRING_TRIGCAT_YD_BEYONDFATE,ReplaceableTextures\CommandButtons\BTNInfernal.blp
+		TC_YD_LOCALVARIABLE=WESTRING_TRIGCAT_YD_LOCALVARIABLE,ReplaceableTextures\WorldEditUI\Editor-ScriptVariable.blp,1
+			// 1: 隐藏所有普通YDWE UI中的 WESTRING_TRIGCAT_YD_LOCALVARIABLE 函数
 	// YDWE
-		TC_YD_ABILITY=[YDWE]技能,ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
-		TC_YD_SYSTEM=[YDWE]系统,ReplaceableTextures\CommandButtons\BTNMetamorphosis.blp
-		TC_YD_FUNCTION=[YDWE]函数,ReplaceableTextures\CommandButtons\BTNEvasion.blp
-		TC_YD_RESTORE=[YDWE]存储,ReplaceableTextures\CommandButtons\BTNLoad.blp
-		TC_YD_EFFECT=[YDWE]特效,ReplaceableTextures\PassiveButtons\PASBTNFeedBack.blp
-		//TC_YD_LOCALVARIABLE=[YDWE]变量,ReplaceableTextures\WorldEditUI\Editor-ScriptVariable.blp -> Hide, because YDTRIGGER is enabled
-		TC_YD_AI=[YDWE]AI,ReplaceableTextures\CommandButtons\BTNHeroTinker.blp
-		TC_YD_EVENT=[YDWE]事件,UI\Widgets\ToolTips\Human\ToolTipStonesIcon.blp
-		TC_YD_SAVELOAD=[YDWE]存档,ReplaceableTextures\CommandButtons\BTNTome.blp
-		TC_YD_SCRIPTSYSTEM=[ScriptSystem]电影,ReplaceableTextures\WorldEditUI\Doodad-Cinematic.blp
+		TC_YD_ABILITY=WESTRING_TRIGCAT_YD_ABILITY,ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+		TC_YD_SYSTEM=WESTRING_TRIGCAT_YD_SYSTEM,ReplaceableTextures\CommandButtons\BTNMetamorphosis.blp
+		TC_YD_FUNCTION=WESTRING_TRIGCAT_YD_FUNCTION,ReplaceableTextures\CommandButtons\BTNEvasion.blp
+		TC_YD_RESTORE=WESTRING_TRIGCAT_YD_RESTORE,ReplaceableTextures\CommandButtons\BTNLoad.blp
+		TC_YD_EFFECT=WESTRING_TRIGCAT_YD_EFFECT,ReplaceableTextures\PassiveButtons\PASBTNFeedBack.blp
+		TC_YD_AI=WESTRING_TRIGCAT_YD_AI,ReplaceableTextures\CommandButtons\BTNHeroTinker.blp
+		TC_YD_EVENT=WESTRING_TRIGCAT_YD_EVENT,UI\Widgets\ToolTips\Human\ToolTipStonesIcon.blp
+		TC_YD_SAVELOAD=WESTRING_TRIGCAT_YD_SAVELOAD,ReplaceableTextures\CommandButtons\BTNTome.blp
+		TC_YD_SCRIPTSYSTEM=WESTRING_TRIGCAT_YD_SCRIPTSYSTEM,ReplaceableTextures\WorldEditUI\Doodad-Cinematic.blp
 	// Blizzard
 		TC_AI=WESTRING_TRIGCAT_AI,ReplaceableTextures\WorldEditUI\Actions-AI
 		TC_TRIGGER=WESTRING_TRIGCAT_TRIGGER,ReplaceableTextures\CommandButtons\BTNEngineeringUpgrade.blp
@@ -85,7 +84,7 @@
 		TC_PLAYER=WESTRING_TRIGCAT_PLAYER,ReplaceableTextures\WorldEditUI\Actions-Player
 		TC_PLAYERGROUP=WESTRING_TRIGCAT_PLAYERGROUP,ReplaceableTextures\WorldEditUI\Actions-PlayerGroup
 		TC_ITEM=WESTRING_TRIGCAT_ITEM,ReplaceableTextures\WorldEditUI\Actions-Item
-		TC_ITEMPOOL=[BLIZ]物品池,ReplaceableTextures\WorldEditUI\Actions-Item
+		TC_ITEMPOOL=WESTRING_TRIGCAT_ITEMPOOL,ReplaceableTextures\WorldEditUI\Actions-Item
 		TC_UNITSEL=WESTRING_TRIGCAT_UNITSEL,ReplaceableTextures\WorldEditUI\Actions-UnitSelection
 		TC_HERO=WESTRING_TRIGCAT_HERO,ReplaceableTextures\WorldEditUI\Actions-Hero
 		TC_GAME=WESTRING_TRIGCAT_GAME,ReplaceableTextures\WorldEditUI\Actions-Game
@@ -94,10 +93,10 @@
 		TC_CONVERSION=WESTRING_TRIGCAT_CONVERSION,ReplaceableTextures\WorldEditUI\Actions-AI
 		TC_HASHTABLE=WESTRING_TRIGCAT_HASHTABLE,ReplaceableTextures\WorldEditUI\Editor-Toolbar-SaveMap
 	// JAPI
-		TC_JAPI_UNIT=[JAPI]单位,ReplaceableTextures\CommandButtons\BTNTome.blp
-		TC_JAPI_FUNCTION=[JAPI]函数,ReplaceableTextures\CommandButtons\BTNTome.blp
-		TC_JAPI_SAVELOAD=[JAPI]存档,ReplaceableTextures\CommandButtons\BTNTome.blp
-		TC_JAPI_PLAYER=[JAPI]玩家,ReplaceableTextures\CommandButtons\BTNTome.blp
+		TC_JAPI_UNIT=WESTRING_TRIGCAT_JAPI_UNIT,ReplaceableTextures\CommandButtons\BTNTome.blp
+		TC_JAPI_FUNCTION=WESTRING_TRIGCAT_JAPI_FUNCTION,ReplaceableTextures\CommandButtons\BTNTome.blp
+		TC_JAPI_SAVELOAD=WESTRING_TRIGCAT_JAPI_SAVELOAD,ReplaceableTextures\CommandButtons\BTNTome.blp
+		TC_JAPI_PLAYER=WESTRING_TRIGCAT_JAPI_PLAYER,ReplaceableTextures\CommandButtons\BTNTome.blp
 	// Debug
 		//%%% DEBUG - Remove for retail
 		TC_OBSOLETE=WESTRING_TRIGCAT_OBSOLETE,ReplaceableTextures\WorldEditUI\Editor-TriggerFunction
@@ -365,19 +364,19 @@
 		AbilityDataString=0,0,0,WESTRING_TRIGTYPE_AbilityDataString,integer
 		ChatRecipient=0,0,0,WESTRING_TRIGTYPE_ChatRecipient,integer
 		ItemDataString=0,0,0,物品数据 (字符串),integer
-	// UI.YDWE.YDTRIGGER
+	// 逆天
 		typename=1,0,0,WESTRING_TRIGTYPE_typename,string
 		objecttype=1,0,0,WESTRING_TRIGTYPE_objecttype,string
-	// UI.DYC 1.03
+	// DYC 1.03
 		DYCUPauseOption=0,0,0,WESTRING_TRIGTYPE_DYCUPauseOption,integer
-	// UI.WMUI.Lua
+	// WMUI.Lua
 		objtype=0,0,0,WESTRING_TRIGTYPE_objtype,string
 		critmathtype=0,0,0,WESTRING_TRIGTYPE_critmathtype,string
 		mathtype=0,0,0,WESTRING_TRIGTYPE_mathtype,string
 		damagechoose=0,0,0,WESTRING_TRIGTYPE_damagechoose,boolean
 		situation=0,0,0,WESTRING_TRIGTYPE_situation,string
 		damagekey=0,0,0,WESTRING_TRIGTYPE_damagekey,boolean
-	// UI.WMUI.Phre
+	// WMUI.Phre
 		NewUIRefresh=0,0,0,WESTRING_TRIGTYPE_NewUIRefresh,boolean
 		NewUIGetCost=0,0,0,WESTRING_TRIGTYPE_NewUIGetCost,boolean
 		NewUIAttackType=0,0,0,WESTRING_TRIGTYPE_NewUIAttackType,integer
@@ -413,7 +412,7 @@
 		//
 		// Note: If the code text is a literal string, surround it with backward single quotes (`),
 		//       and they will be converted to double quotes in the script.
-	// UI.WMUI.Lua
+	// WMUI.Lua
 		obj_unit=0,objtype,'unit',单位
 		obj_ability=0,objtype,'abi',技能
 		obj_item=0,objtype,'item',物品
@@ -433,7 +432,7 @@
 		situation_PassiveNormal=0,situation,`PassiveNormal`,收到伤害
 		damagekey_true=0,damagekey,true,开启
 		damagekey_false=0,damagekey,false,关闭
-	// UI.WMUI.Phre
+	// WMUI.Phre
 		RefreshDotA=0,NewUIRefresh,true,DotA式
 		RefreshLOL=0,NewUIRefresh,false,LOL式
 		WMLumber=0,NewUIGetCost,false,木材
@@ -511,12 +510,12 @@
 		NewUITEXMAP_FLAG_WRAP_U=0,NewUITEXMAP_FLAG,1,重叠(U)
 		NewUITEXMAP_FLAG_WRAP_UV=0,NewUITEXMAP_FLAG,2,重叠(UV)
 		NewUITEXMAP_FLAG_WRAP_V=0,NewUITEXMAP_FLAG,3,重叠(V)
-	// UI.DYC 1.03
+	// DYC 1.03
 		dyc_LastSpawnTimer=0,timer,dyc_LastSpawnTimer,最后创建的刷兵计时器
 		DYCUPause1=0,DYCUPauseOption,1,暂停单位
 		DYCUPause2=0,DYCUPauseOption,2,暂停动画
 		DYCUPause3=0,DYCUPauseOption,3,暂停单位和动画
-	// UI.YDWE.JAPI
+	// JAPI
 		UnitStateDamageDice=0,unitstate,ConvertUnitState(0x10),"骰子数量 [JAPI]"
 		UnitStateDamageSide=0,unitstate,ConvertUnitState(0x11),"骰子面数 [JAPI]"
 		UnitStateDamageBase=0,unitstate,ConvertUnitState(0x12),"基础伤害 [JAPI]"
@@ -3175,7 +3174,7 @@
 		// LuaEvent
 			LuaInEvent=1,string
 				_LuaInEvent_Defaults=_
-				_LuaInEvent_Category=TM_WM_Lua
+				_LuaInEvent_Category=TC_WM_Lua
 	// YD Event Trigger
 		YDWESyStemAnyUnitDamagedRegistTrigger=1
 			_YDWESyStemAnyUnitDamagedRegistTrigger_Defaults=
@@ -3562,31 +3561,31 @@
 		// Lua
 			LuaDamageKey=0,boolean
 				_LuaDamageKey_Defaults=true
-				_LuaDamageKey_Category=TM_WM_Lua
+				_LuaDamageKey_Category=TC_WM_Lua
 			LuaInDamageUnit=0,unit,situation,mathtype,real,damagechoose,damagetype
 				_LuaInDamageUnit_Defaults=GetTriggerUnit,situation_Normal,math_add,_,damagechoose_set,DamageTypeNull
-				_LuaInDamageUnit_Category=TM_WM_Lua
+				_LuaInDamageUnit_Category=TC_WM_Lua
 			LuaInDamage=0,objtype,integer,situation,mathtype,real,damagechoose,damagetype
 				_LuaInDamage_Defaults=_,_,situation_Normal,math_add,_,damagechoose_set,DamageTypeNull
-				_LuaInDamage_Category=TM_WM_Lua
+				_LuaInDamage_Category=TC_WM_Lua
 			LuaInCritOdd=0,objtype,integer,critmathtype,real,damagechoose
 				_LuaInCritOdd_Defaults=_,_,critmath_add,_,damagechoose_set
-				_LuaInCritOdd_Category=TM_WM_Lua
+				_LuaInCritOdd_Category=TC_WM_Lua
 			LuaInCritValue=0,objtype,integer,critmathtype,real,damagechoose
 				_LuaInCritValue_Defaults=_,_,critmath_add,_,damagechoose_set
-				_LuaInCritValue_Category=TM_WM_Lua
+				_LuaInCritValue_Category=TC_WM_Lua
 			LuaInCritOddUnit=0,unit,critmathtype,real,damagechoose
 				_LuaInCritOddUnit_Defaults=GetTriggerUnit,critmath_add,_,damagechoose_set
-				_LuaInCritOddUnit_Category=TM_WM_Lua
+				_LuaInCritOddUnit_Category=TC_WM_Lua
 			LuaInCritValueUnit=0,unit,critmathtype,real,damagechoose
 				_LuaInCritValueUnit_Defaults=GetTriggerUnit,critmath_add,_,damagechoose_set
-				_LuaInCritValueUnit_Category=TM_WM_Lua
+				_LuaInCritValueUnit_Category=TC_WM_Lua
 			LuaToEvent=0,string
 				_LuaToEvent_Defaults=_
-				_LuaToEvent_Category=TM_WM_Lua
+				_LuaToEvent_Category=TC_WM_Lua
 			LuaRemoveEventAction=0,trigger,string
 				_LuaRemoveEventAction_Defaults=_,GetTriggeringTrigger,_
-				_LuaRemoveEventAction_Category=TM_WM_Lua
+				_LuaRemoveEventAction_Category=TC_WM_Lua
 		// AntiCheat
 			AntiCheatPShan=0,unit
 				_AntiCheatPShan_Defaults=GetTriggerUnit

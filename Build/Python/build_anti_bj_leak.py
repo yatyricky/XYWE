@@ -15,22 +15,22 @@ def write_header(f):
   f.write('//             thanks to 最萌小汐             //\n')
   f.write('//--------------------------------------------//\n')
   f.write('#endif\n')
-  
+
 ###############################################################
 def create_file(name, buf, outputpath):
-  
+
   reobj = re.compile(r' YDWE([a-zA-Z0-9_]*)Null')
-  
+
   func_list = []
   for match in reobj.finditer(buf):
     if name != match.group(1):
       func_list[0:0] = [match.group(1)]
       #print name + ' - ' + match.group(1)
   func_list = list(set(func_list))
-  
+
   try:
     outfile  = file(outputpath + '/detail/' + name + ".j", "w")
-    try:      
+    try:
       write_header(outfile)
       outfile.write('#ifdef USE_BJ_ANTI_LEAK\n')
       outfile.write('#ifndef YDWE' + name + 'NullIncluded\n')
@@ -53,7 +53,7 @@ def create_file(name, buf, outputpath):
           else:
             outfile.write(', YDWE' + func + 'Null')
         outfile.write('\n')
-        
+
       outfile.write('\n')
 
       reobj = re.compile(r'yd_NullTempCam')
@@ -64,7 +64,7 @@ def create_file(name, buf, outputpath):
         outfile.write('    camerasetup yd_NullTempCam\n')
         outfile.write('#endif\n')
         outfile.write('endglobals\n\n')
-        
+
       reobj = re.compile(r'yd_NullTempRegion')
       if reobj.search(buf):
         outfile.write('globals\n')
@@ -73,7 +73,7 @@ def create_file(name, buf, outputpath):
         outfile.write('    region yd_NullTempRegion\n')
         outfile.write('#endif\n')
         outfile.write('endglobals\n\n')
-        
+
       reobj = re.compile(r'yd_NullTempUnit')
       if reobj.search(buf):
         outfile.write('globals\n')
@@ -91,7 +91,7 @@ def create_file(name, buf, outputpath):
         outfile.write('    item yd_NullTempItem\n')
         outfile.write('#endif\n')
         outfile.write('endglobals\n\n')
-        
+
       reobj = re.compile(r'yd_NullTempGroup')
       if reobj.search(buf):
         outfile.write('globals\n')
@@ -100,7 +100,7 @@ def create_file(name, buf, outputpath):
         outfile.write('    group yd_NullTempGroup\n')
         outfile.write('#endif\n')
         outfile.write('endglobals\n\n')
-        
+
       reobj = re.compile(r'yd_NullTempForce')
       if reobj.search(buf):
         outfile.write('globals\n')
@@ -109,7 +109,7 @@ def create_file(name, buf, outputpath):
         outfile.write('    force yd_NullTempForce\n')
         outfile.write('#endif\n')
         outfile.write('endglobals\n\n')
-        
+
       outfile.write(buf)
       outfile.write('\n')
       outfile.write('\n')
@@ -191,7 +191,7 @@ def build_anti_bj_leak():
 def Configuration():
     if len(sys.argv) > 1:
         return sys.argv[1]
-    return 'Debug'  
+    return 'Debug'
 ###############################################################
 if __name__ == "__main__":
   util.path.ResetPath(Configuration())

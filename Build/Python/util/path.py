@@ -29,7 +29,7 @@ path['CoreRoot']     = path['Development'] / 'Editor' / 'Core'
 path['ResultRoot']   = path['Development'] / 'Editor' / 'Build'
 path['UIObj']        = path['ResultRoot'] / 'obj' / 'UI' / 'YDUI'
 
-def ResetPath(configuration):    
+def ResetPath(configuration):
     path['Result']       = path['ResultRoot'] / 'bin' / configuration
     path['ResultCore']   = path['Result'] / 'bin'
     path['ResultPlugin'] = path['Result'] / 'plugin'

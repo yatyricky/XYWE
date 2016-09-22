@@ -1,0 +1,122 @@
+﻿#################################################################
+#
+# File Copy & Directory Copy
+#
+# LazyPacker will automatic ignore lazypack, *.lazycfg, *.lazyimp file, unless you include them
+#
+#################################################################
+
+#################################################################
+#
+# Compile
+#
+# Notice
+#     A key must follow a white line to close the key
+#
+# Declare global common content in this file
+#     @KEY KeyName
+#     Common_Content
+#
+# Declare global language content in this file
+#     @KEY KeyName
+#     Language1_Content
+#     Language2_Content
+#     LanguageN_Content
+#
+# Declare local common content in fileName.extension.lazy
+#     KeyName
+#     Common_Content
+#
+# Declare local language content in fileName.extension.lazy
+#     KeyName
+#     Language1_Content
+#     Language2_Content
+#     LanguageN_Content
+#
+#################################################################
+
+#################################
+# Declare Edition Type
+#################################
+
+@EDITION Clear,Normal
+
+#################################
+# Declare Language Type
+#################################
+
+@LANGUAGE zhCN,zhTW,enUS
+
+#################################
+# Mark Ignore Empty Directory
+#################################
+
+@IGNORE-EMPTY-DIRECTORY
+
+#################################
+# Declare Compile Match Format
+#
+# Default
+#     [[Key]]
+#
+# Command
+#     @IMPORT fileName
+#         This will import whole content from "fileName", base path is file or imported file's path
+#         Notice this will only import fileName.lazyimp file, no others extension
+#     @IMPORT-TRIM
+#         Mark text import format for the follow, trim white space before start & after end in a line
+#     @COMPILE-TRIM
+#         Trim text while compile, white space before start & after end in a line will be removed
+#     @COMPILE-TRIM-TAB
+#         Trim text while compile, tab indent before start & after end in a line will be removed
+#
+# How to use Command
+#     Key -> @Command
+#     Key -> @Command Paramters
+#
+#################################
+
+@COMPILE [[Key]]
+
+#################################
+# Declare Global Key
+#################################
+
+@KEY YDVersion
+1.30.2
+
+@KEY Version
+1.1.Alpha.1
+
+@KEY VersionClass
+内部预览版
+
+@KEY EditorName
+咸鱼地图编辑器
+鹹魚地圖編輯器
+Salted Fish World Editor
+
+@KEY VersionName
+咸鱼降临
+鹹魚降臨
+Coming of the Salted Fish
+
+#############################################################################################
+
+[*]
+
+- *.yd
+
+~ core\ydwe\share\script\ydwe_on_startup.lua
+~ core\ydwe\share\script\uiloader.lua
+
+~ core\ydwe\share\mpq\ydwe\ui\TriggerData.txt
+~ core\ydwe\share\mpq\ydwe\ui\TriggerStrings.txt
+~ core\ydwe\share\mpq\ydwe\ui\WorldEditStrings.txt
+
+[Clear]
+
+- core\ydwe\logs
+- core\ydwe\example(演示地图)
+- core\ydwe\附录(新手必看)
+- *.url
