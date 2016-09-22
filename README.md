@@ -4,6 +4,6 @@
 
 ## 编译方法
 
-暂未撰写，施工中。。。
+进入/Build目录查看README.md
 
 [1]:https://wow9.org/xywe "咸鱼地图编辑器 - 官方网站"
