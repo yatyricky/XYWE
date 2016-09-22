@@ -31,6 +31,12 @@ def Log():
         logname = sys.argv[3]
     sys.stdout = RedirectLog(logname, sys.stdout)
 
+def update_move_ydwe(configuration):
+    from copy_all           import copy_component
+
+    print ('update_move_ydwe')
+    fs.copy_directory(path['Development'] / 'Editor' / 'Component', path['Result'] / 'core' / 'ydwe')
+
 def update_move_xywe(configuration):
     print ('update_move_xywe')
     fs.copy_directory(
@@ -49,12 +55,17 @@ def update_pack(configuration):
     mode = 'Silent'
     os.system(str(packer) + ' ' + str(config) + ' ' + edition + ' ' + language + ' ' + mode)
 
-def update(configuration):
+def update(configuration, ignoreYDWE = False):
     Log()
-    print ('update')
+    if ignoreYDWE:
+        print ('build - update')
+    else:
+        print ('update')
     t = datetime.datetime.now()
     print ('update {0}'.format(t))
 
+    if not ignoreYDWE:
+        update_move_ydwe(configuration)
     update_move_xywe(configuration)
     update_pack(configuration)
 
@@ -104,7 +115,7 @@ def build(msvc_version, configuration):
     move_include()
     build_all(msvc_version, configuration)
     build_move(configuration)
-    update(configuration)
+    update(configuration, True)
     print ('time {0}'.format(datetime.datetime.now() - t))
 
 def Configuration():
