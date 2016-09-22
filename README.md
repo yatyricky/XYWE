@@ -4,7 +4,6 @@
 
 ## 编译方法
 
-1. 执行/Build/Build_Release.bat
-2. 编译好的文件可以在/Build/publish/Release/找到
+暂未撰写，施工中。。。
 
 [1]:https://wow9.org/xywe "咸鱼地图编辑器 - 官方网站"
