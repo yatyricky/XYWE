@@ -6,6 +6,11 @@
 		Lua引擎的libs_package的符号现在使用文件形式
 		为Lua引擎集成调试器
 	增加部分来自WMUI的物体编辑器文本描述及属性Tip
+	XYWE启动器现在会自动检验版本并提示更新
+	WE的随机Tip现在能够从服务器上的Tip库得到更新
+	WE的随机Tip现在不会重复，直到所有的Tip都被随机显示完一次
+	添加由苍老湿提供的飝夫斯基使用ejass编写的ejtimer库（EJNewIndex、EJDestroyIndex、EJGetTimerIndex）
+	对.NET版本的需求由4.6.1降低到4.5.2
 
 咸鱼降临:1.01.Alpha.1 2016-9-21 23:07:29
 	修复WMUI中SetJassLocalVariables无法正常使用的BUG

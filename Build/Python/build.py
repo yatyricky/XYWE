@@ -35,7 +35,11 @@ def update_move_ydwe(configuration):
     from copy_all           import copy_component
 
     print ('update_move_ydwe')
-    fs.copy_directory(path['Development'] / 'Editor' / 'Component', path['Result'] / 'core' / 'ydwe')
+    fs.copy_directory(
+          path['Development'] / 'Editor' / 'Component'
+        , path['ProjectRoot'] / 'Build' / 'publish' / configuration / 'core' / 'ydwe'
+        , []
+        , False)
 
 def update_move_xywe(configuration):
     print ('update_move_xywe')

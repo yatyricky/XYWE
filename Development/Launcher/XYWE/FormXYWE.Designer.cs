@@ -32,21 +32,21 @@
             // 
             // LlVersion
             // 
-            this.LlVersion.AutoSize = true;
-            this.LlVersion.Location = new System.Drawing.Point(260, 223);
+            this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.LlVersion.Location = new System.Drawing.Point(214, 223);
             this.LlVersion.Name = "LlVersion";
-            this.LlVersion.Size = new System.Drawing.Size(125, 12);
+            this.LlVersion.Size = new System.Drawing.Size(171, 12);
             this.LlVersion.TabIndex = 0;
             this.LlVersion.TabStop = true;
-            this.LlVersion.Text = "咸鱼降临:1.1.Alpha.1";
-            this.LlVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LlVersion.Text = "LlVersion";
+            this.LlVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.LlVersion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlVersion_LinkClicked);
             // 
             // BtnXYCodeLibraryManager
             // 
             this.BtnXYCodeLibraryManager.Enabled = false;
             this.BtnXYCodeLibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(118, 12);
+            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(118, 120);
             this.BtnXYCodeLibraryManager.Name = "BtnXYCodeLibraryManager";
             this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYCodeLibraryManager.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.BtnXYUILibraryManager.Enabled = false;
             this.BtnXYUILibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(12, 12);
+            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(12, 120);
             this.BtnXYUILibraryManager.Name = "BtnXYUILibraryManager";
             this.BtnXYUILibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYUILibraryManager.TabIndex = 3;
@@ -91,8 +91,8 @@
             this.Name = "FormXYWE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "咸鱼地图编辑器";
+            this.Load += new System.EventHandler(this.FormXYWE_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

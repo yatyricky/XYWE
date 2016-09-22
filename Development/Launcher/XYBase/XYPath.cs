@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Ini;
 
 namespace XYBase {
     public static class XYPath {
@@ -15,7 +16,7 @@ namespace XYBase {
 #if DEBUG
             public static string Editor = Path.GetFullPath(Application.StartupPath + @"\..\..\..\..\..\Editor");
 #else
-            public static string Editor = Path.GetFullPath(Application.StartupPath + @"\..\..");
+            public static string Editor = Path.GetFullPath(@"..\..");
 #endif
             public static string Core = Editor + @"\core";
 
@@ -36,6 +37,8 @@ namespace XYBase {
             public static string ProgramWe = Dir.Ydwe + @"\YDWE.exe";
             public static string MpqConfig = Dir.Mpq + @"\config";
             public static string MpqSort = Dir.Mpq + @"\sort";
+
+            public static string XyweUiWes = Dir.MpqUiXywe + @"\WorldEditStrings.txt";
         }
     }
 }
