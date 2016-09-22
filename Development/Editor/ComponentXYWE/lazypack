@@ -106,6 +106,7 @@ Coming of the Salted Fish
 [*]
 
 - *.yd
+- *.gitignore
 
 ~ core\ydwe\share\script\ydwe_on_startup.lua
 ~ core\ydwe\share\script\uiloader.lua
