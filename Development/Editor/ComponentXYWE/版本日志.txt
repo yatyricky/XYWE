@@ -1,4 +1,4 @@
-咸鱼降临:1.01.Alpha.2
+咸鱼降临:1.01.Alpha.2 2016-9-23 03:06:03
 	合并YDWE在2016.9.21夜晚的Github更新
 		YDWE/example(演示地图)/JAPI/lua/blizzard.lua的编码更换为UTF8
 		YDWE/example(演示地图)/JAPI/lua/main.lua的编码更换为UTF8
