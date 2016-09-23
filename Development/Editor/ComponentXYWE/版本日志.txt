@@ -1,3 +1,14 @@
+咸鱼降临:1.01.Alpha.3
+	合并YDWE在2016.9.23下午的Github更新
+		补充遗漏的2个JAPI：YDWEGetItemDataString、YDWESetItemDataString
+	优化触发编辑器的部分UI描述
+	修正[WMUI]文明 - 环绕单位系统 找不到函数WMWMLoadUnitHandle的BUG（正确的函数名为WMLoadUnitHandle）(感谢 冷枫 的反馈)
+	修正[WMUI]文明 - 将slk文件注入地图 无法正常保存的BUG(感谢 冷枫 的反馈)
+	优化[WMUI]文明 - 将slk文件注入地图 的描述
+	修改WE启动时的版权提示的内容排版方式
+	修改进入WE后的顶部标题名字显示规则（使用中文会在读取有中文字符的路径时变成乱码，因此改为XY World Editor）(感谢 纸伊 的反馈)
+	修复YDWEConfig.exe消失的问题(感谢 冷枫 的反馈)
+
 咸鱼降临:1.01.Alpha.2 2016-9-23 03:06:03
 	合并YDWE在2016.9.21夜晚的Github更新
 		YDWE/example(演示地图)/JAPI/lua/blizzard.lua的编码更换为UTF8
