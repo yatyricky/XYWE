@@ -96,9 +96,17 @@
 鹹魚地圖編輯器
 Salted Fish World Editor
 
+@KEY EditorNameMin
+XY World Editor
+
 @KEY VersionName
 咸鱼降临
 鹹魚降臨
+Coming of the Salted Fish
+
+@KEY VersionNameMin
+XYJL
+XYJL
 Coming of the Salted Fish
 
 #############################################################################################

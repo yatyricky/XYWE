@@ -21,20 +21,34 @@ function SpellWMAbilitysAction takes nothing returns nothing
 endfunction
 function InitSlkAbilitysData takes nothing returns nothing
     local trigger t=CreateTrigger()
-<?SLK = require("slk"):Create()?>\
-<?for alias,Obj in SLK.Foreach(SLK.Ability)do?>\
-<?if alias=='WMRu' or Obj['code']=='WMRu' then?>\
-<?local modelpath=string.gsub(Obj['SpecialArt'],"\\","\\\\")?>\
+<?
+SLK = require 'slk'
+for alias, Obj in pairs(SLK.ability) do
+    if alias == 'WMRu' or Obj['code'] == 'WMRu' then
+        for k, v in pairs(Obj) do
+            log.debug(k)
+            log.debug(v)
+        end
+        local modelPath = string.gsub(Obj['SpecialArt'], "\\", "\\\\")
+?>
 call SaveBoolean(WMSlkAbilitysData,'<?=alias?>',0,true)
-call SaveStr(WMSlkAbilitysData,'<?=alias?>',1,"<?=modelpath?>")//路径特效
-<?for i=1,Obj['levels'] do?>\
+call SaveStr(WMSlkAbilitysData,'<?=alias?>',1,"<?=modelPath?>")//路径特效
+<?
+        for i = 1, Obj['levels'] do
+?>
 call SaveInteger(WMSlkAbilitysData,'<?=alias?>',<?=i?>,<?=Obj['DataA'..i]?>)//冲锋距离
 call SaveInteger(WMSlkAbilitysData,'<?=alias?>',<?=i+100?>,<?=Obj['DataB'..i]?>)//冲锋速度
 call SaveInteger(WMSlkAbilitysData,'<?=alias?>',<?=i+200?>,<?=Obj['DataC'..i]?>)//冲锋伤害
-<?end end end?>
+<?
+        end
+    end
+end
+?>
     call TriggerRegisterAnyUnitEventBJ(t,EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(t,Condition(function SpellWMAbilitysAction))
     set t=null
 endfunction
 endlibrary
+
 #endif
+

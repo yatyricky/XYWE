@@ -160,15 +160,14 @@ function event.EVENT_WE_START(event_data)
 	log.debug("********************* on startup start *********************")
 	
 	-- 读取版本
-	xywe_version = "[[VersionName@ANSI]] [[Version]]"
 	ydwe_version = sys.version { file = fs.ydwe_path() / "ydwe.exe" }
 	war3_version = sys.war3_version { file = fs.war3_path() / "game.dll" }
 
-	log.debug("xywe version " .. tostring(xywe_version))
+	log.debug("xywe version " .. "[[VersionName@ANSI]] [[Version]]")
 	log.debug("ydwe version " .. tostring(ydwe_version))
 	log.debug("war3 version " .. tostring(war3_version))
 	
-	-- 刷新配置数据	
+	-- 刷新配置数据
 	global_config_reload()
 
 	-- 检测UI和Units目录
