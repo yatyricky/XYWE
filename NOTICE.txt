@@ -1,0 +1,4 @@
+XYWE is based on YDWE which using Apache 2.0 License.
+Thanks for all YDWE contributors.
+
+See YDWE project on github: https://github.com/actboy168/YDWE
