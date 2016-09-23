@@ -5,8 +5,8 @@ library WMAroundSystem requires WMBase
 function Huanrao takes nothing returns nothing
      local timer t=GetExpiredTimer()
      local integer id=GetHandleId(t)-0x100000
-     local unit u=WMWMLoadUnitHandle(id,1)
-     local unit U=WMWMLoadUnitHandle(id,2)
+     local unit u=WMLoadUnitHandle(id,1)
+     local unit U=WMLoadUnitHandle(id,2)
      local real a=WMLoadReal(id,3)
      local real b=WMLoadReal(id,4)
      local real h=WMLoadReal(id,5)

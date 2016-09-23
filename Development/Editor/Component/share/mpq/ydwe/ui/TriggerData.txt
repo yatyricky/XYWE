@@ -3170,24 +3170,105 @@
 			// Special events not defined in scripts, handled internally by the editor
 			_MapInitializationEvent_Defaults=
 			_MapInitializationEvent_Category=TC_NOTHING
-	// UI.WMUI.Lua
+	// Lua
 		// LuaEvent
 			LuaInEvent=1,string
 				_LuaInEvent_Defaults=_
 				_LuaInEvent_Category=TC_WM_Lua
-	// YD Event Trigger
-		YDWESyStemAnyUnitDamagedRegistTrigger=1
-			_YDWESyStemAnyUnitDamagedRegistTrigger_Defaults=
-			_YDWESyStemAnyUnitDamagedRegistTrigger_Category=TC_YD_EVENT
-		YDWESyStemItemUnmovableRegistTrigger=1
-			_YDWESyStemItemUnmovableRegistTrigger_Defaults=
-			_YDWESyStemItemUnmovableRegistTrigger_Category=TC_YD_EVENT
-		YDWESyStemItemCombineRegistTrigger=1
-			_YDWESyStemItemCombineRegistTrigger_Defaults=
-			_YDWESyStemItemCombineRegistTrigger_Category=TC_YD_EVENT
-		YDWESyStemAbilityCastingOverRegistTrigger=0,abilevent
-			_YDWESyStemAbilityCastingOverRegistTrigger_Defaults=abileventA
-			_YDWESyStemAbilityCastingOverRegistTrigger_Category=TC_YD_EVENT
+	// Game events
+		TriggerRegisterGameStateEventTimeOfDay=0,limitop,real
+			_TriggerRegisterGameStateEventTimeOfDay_Defaults=LimitOpEqual,12
+			_TriggerRegisterGameStateEventTimeOfDay_Limits=_,_,0,24
+			_TriggerRegisterGameStateEventTimeOfDay_Category=TC_GAME
+		TriggerRegisterVariableEvent=0,VarAsString_Real,limitop,real
+			_TriggerRegisterVariableEvent_Defaults=_,LimitOpEqual,0
+			_TriggerRegisterVariableEvent_Category=TC_GAME
+		TriggerRegisterGameLoadedEventBJ=1,nothing
+			_TriggerRegisterGameLoadedEventBJ_Defaults=
+			_TriggerRegisterGameLoadedEventBJ_Category=TC_GAME
+		TriggerRegisterGameSavedEventBJ=1,nothing
+			_TriggerRegisterGameSavedEventBJ_Defaults=
+			_TriggerRegisterGameSavedEventBJ_Category=TC_GAME
+		TriggerRegisterShowSkillEventBJ=0,nothing
+			_TriggerRegisterShowSkillEventBJ_Defaults=
+			_TriggerRegisterShowSkillEventBJ_Category=TC_GAME
+		TriggerRegisterBuildSubmenuEventBJ=0,nothing
+			_TriggerRegisterBuildSubmenuEventBJ_Defaults=
+			_TriggerRegisterBuildSubmenuEventBJ_Category=TC_GAME
+		TriggerRegisterGameEvent=1,gameevent
+			_TriggerRegisterGameEvent_Defaults=GameEventTourneyNow
+			_TriggerRegisterGameEvent_Category=TC_GAME
+	// Timer events
+		TriggerRegisterTimerEventSingle=0,real
+			_TriggerRegisterTimerEventSingle_Defaults=5
+			_TriggerRegisterTimerEventSingle_Limits=0,_
+			_TriggerRegisterTimerEventSingle_Category=TC_TIME
+		TriggerRegisterTimerEventPeriodic=0,real
+			_TriggerRegisterTimerEventPeriodic_Defaults=2
+			_TriggerRegisterTimerEventPeriodic_Limits=0,_
+			_TriggerRegisterTimerEventPeriodic_Category=TC_TIME
+		TriggerRegisterTimerExpireEventBJ=0,timer
+			_TriggerRegisterTimerExpireEventBJ_Defaults=_
+			_TriggerRegisterTimerExpireEventBJ_Category=TC_TIME
+			_TriggerRegisterTimerExpireEventBJ_ScriptName=TriggerRegisterTimerExpireEvent
+	// Dialog events
+		TriggerRegisterDialogEventBJ=0,dialog
+			_TriggerRegisterDialogEventBJ_Defaults=_
+			_TriggerRegisterDialogEventBJ_Category=TC_DIALOG
+			_TriggerRegisterDialogEventBJ_ScriptName=TriggerRegisterDialogEvent
+		TriggerRegisterDialogButtonEvent=0,button
+			_TriggerRegisterDialogButtonEvent_Defaults=_
+			_TriggerRegisterDialogButtonEvent_Category=TC_DIALOG
+	// Trackable events
+		TriggerRegisterTrackableHitEvent=0,trackable
+			_TriggerRegisterTrackableHitEvent_Defaults=_
+			_TriggerRegisterTrackableHitEvent_Category=TC_TRACKABLE
+		TriggerRegisterTrackableTrackEvent=0,trackable
+			_TriggerRegisterTrackableTrackEvent_Defaults=_
+			_TriggerRegisterTrackableTrackEvent_Category=TC_TRACKABLE
+	// Player events
+		TriggerRegisterPlayerChatEvent=0,player,string,chatmatchtype
+			_TriggerRegisterPlayerChatEvent_Defaults=Player00,_,ChatMatchTypeExact
+			_TriggerRegisterPlayerChatEvent_Category=TC_PLAYER
+		TriggerRegisterPlayerEventEndCinematic=0,player
+			_TriggerRegisterPlayerEventEndCinematic_Defaults=Player00
+			_TriggerRegisterPlayerEventEndCinematic_Category=TC_PLAYER
+		TriggerRegisterPlayerSelectionEventBJ=0,player,seldeseloption
+			_TriggerRegisterPlayerSelectionEventBJ_Defaults=Player00,SelDeselOptionSel
+			_TriggerRegisterPlayerSelectionEventBJ_Category=TC_PLAYER
+		TriggerRegisterPlayerKeyEventBJ=1,player,keyeventtype,keyeventkey
+			_TriggerRegisterPlayerKeyEventBJ_Defaults=Player00,KeyEventTypeDepress,KeyEventKeyLeft
+			_TriggerRegisterPlayerKeyEventBJ_Category=TC_PLAYER
+		TriggerRegisterPlayerStateEvent=0,player,playerstate,limitop,real
+			_TriggerRegisterPlayerStateEvent_Defaults=Player00,PlayerStateGold,LimitOpGreaterThanOrEqual,1000
+			_TriggerRegisterPlayerStateEvent_Category=TC_PLAYER
+		TriggerRegisterPlayerEventAllianceChanged=0,player
+			_TriggerRegisterPlayerEventAllianceChanged_Defaults=Player00
+			_TriggerRegisterPlayerEventAllianceChanged_Category=TC_PLAYER
+		TriggerRegisterPlayerAllianceChange=0,player,alliancetype
+			_TriggerRegisterPlayerAllianceChange_Defaults=Player00,AllianceTypePassive
+			_TriggerRegisterPlayerAllianceChange_Category=TC_PLAYER
+		TriggerRegisterPlayerEventVictory=0,player
+			_TriggerRegisterPlayerEventVictory_Defaults=Player00
+			_TriggerRegisterPlayerEventVictory_Category=TC_PLAYER
+		TriggerRegisterPlayerEventDefeat=0,player
+			_TriggerRegisterPlayerEventDefeat_Defaults=Player00
+			_TriggerRegisterPlayerEventDefeat_Category=TC_PLAYER
+		TriggerRegisterPlayerEventLeave=1,player
+			_TriggerRegisterPlayerEventLeave_Defaults=Player00
+			_TriggerRegisterPlayerEventLeave_Category=TC_PLAYER
+	// Destructible events
+		TriggerRegisterDeathEvent=0,destructable
+			_TriggerRegisterDeathEvent_Defaults=_
+			_TriggerRegisterDeathEvent_Category=TC_DESTRUCT
+		TriggerRegisterDestDeathInRegionEvent=1,rect
+			_TriggerRegisterDestDeathInRegionEvent_Defaults=_
+			_TriggerRegisterDestDeathInRegionEvent_Category=TC_DESTRUCT
+	// Item events
+		TriggerRegisterItemDeathEvent=0,item
+			_TriggerRegisterItemDeathEvent_Defaults=_
+			_TriggerRegisterItemDeathEvent_Category=TC_ITEM
+			_TriggerRegisterItemDeathEvent_ScriptName=TriggerRegisterDeathEvent
 	// Unit events
 		TriggerRegisterUnitEvent=0,unit,unitevent
 			_TriggerRegisterUnitEvent_Defaults=_,UnitEventDeath
@@ -3226,100 +3307,19 @@
 		TriggerRegisterUnitManaEvent=0,unit,limitop,real
 			_TriggerRegisterUnitManaEvent_Defaults=_,LimitOpLessThan,50
 			_TriggerRegisterUnitManaEvent_Category=TC_UNIT
-	// Dialog events
-		TriggerRegisterDialogEventBJ=0,dialog
-			_TriggerRegisterDialogEventBJ_Defaults=_
-			_TriggerRegisterDialogEventBJ_Category=TC_DIALOG
-			_TriggerRegisterDialogEventBJ_ScriptName=TriggerRegisterDialogEvent
-		TriggerRegisterDialogButtonEvent=0,button
-			_TriggerRegisterDialogButtonEvent_Defaults=_
-			_TriggerRegisterDialogButtonEvent_Category=TC_DIALOG
-	// Destructible events
-		TriggerRegisterDeathEvent=0,destructable
-			_TriggerRegisterDeathEvent_Defaults=_
-			_TriggerRegisterDeathEvent_Category=TC_DESTRUCT
-		TriggerRegisterDestDeathInRegionEvent=1,rect
-			_TriggerRegisterDestDeathInRegionEvent_Defaults=_
-			_TriggerRegisterDestDeathInRegionEvent_Category=TC_DESTRUCT
-	// Trackable events
-		TriggerRegisterTrackableHitEvent=0,trackable
-			_TriggerRegisterTrackableHitEvent_Defaults=_
-			_TriggerRegisterTrackableHitEvent_Category=TC_TRACKABLE
-		TriggerRegisterTrackableTrackEvent=0,trackable
-			_TriggerRegisterTrackableTrackEvent_Defaults=_
-			_TriggerRegisterTrackableTrackEvent_Category=TC_TRACKABLE
-	// Timer events
-		TriggerRegisterTimerEventSingle=0,real
-			_TriggerRegisterTimerEventSingle_Defaults=5
-			_TriggerRegisterTimerEventSingle_Limits=0,_
-			_TriggerRegisterTimerEventSingle_Category=TC_TIME
-		TriggerRegisterTimerEventPeriodic=0,real
-			_TriggerRegisterTimerEventPeriodic_Defaults=2
-			_TriggerRegisterTimerEventPeriodic_Limits=0,_
-			_TriggerRegisterTimerEventPeriodic_Category=TC_TIME
-		TriggerRegisterTimerExpireEventBJ=0,timer
-			_TriggerRegisterTimerExpireEventBJ_Defaults=_
-			_TriggerRegisterTimerExpireEventBJ_Category=TC_TIME
-			_TriggerRegisterTimerExpireEventBJ_ScriptName=TriggerRegisterTimerExpireEvent
-	// Player events
-		TriggerRegisterPlayerChatEvent=0,player,string,chatmatchtype
-			_TriggerRegisterPlayerChatEvent_Defaults=Player00,_,ChatMatchTypeExact
-			_TriggerRegisterPlayerChatEvent_Category=TC_PLAYER
-		TriggerRegisterPlayerEventEndCinematic=0,player
-			_TriggerRegisterPlayerEventEndCinematic_Defaults=Player00
-			_TriggerRegisterPlayerEventEndCinematic_Category=TC_PLAYER
-		TriggerRegisterPlayerSelectionEventBJ=0,player,seldeseloption
-			_TriggerRegisterPlayerSelectionEventBJ_Defaults=Player00,SelDeselOptionSel
-			_TriggerRegisterPlayerSelectionEventBJ_Category=TC_PLAYER
-		TriggerRegisterPlayerKeyEventBJ=1,player,keyeventtype,keyeventkey
-			_TriggerRegisterPlayerKeyEventBJ_Defaults=Player00,KeyEventTypeDepress,KeyEventKeyLeft
-			_TriggerRegisterPlayerKeyEventBJ_Category=TC_PLAYER
-		TriggerRegisterPlayerStateEvent=0,player,playerstate,limitop,real
-			_TriggerRegisterPlayerStateEvent_Defaults=Player00,PlayerStateGold,LimitOpGreaterThanOrEqual,1000
-			_TriggerRegisterPlayerStateEvent_Category=TC_PLAYER
-		TriggerRegisterPlayerEventAllianceChanged=0,player
-			_TriggerRegisterPlayerEventAllianceChanged_Defaults=Player00
-			_TriggerRegisterPlayerEventAllianceChanged_Category=TC_PLAYER
-		TriggerRegisterPlayerAllianceChange=0,player,alliancetype
-			_TriggerRegisterPlayerAllianceChange_Defaults=Player00,AllianceTypePassive
-			_TriggerRegisterPlayerAllianceChange_Category=TC_PLAYER
-		TriggerRegisterPlayerEventVictory=0,player
-			_TriggerRegisterPlayerEventVictory_Defaults=Player00
-			_TriggerRegisterPlayerEventVictory_Category=TC_PLAYER
-		TriggerRegisterPlayerEventDefeat=0,player
-			_TriggerRegisterPlayerEventDefeat_Defaults=Player00
-			_TriggerRegisterPlayerEventDefeat_Category=TC_PLAYER
-		TriggerRegisterPlayerEventLeave=1,player
-			_TriggerRegisterPlayerEventLeave_Defaults=Player00
-			_TriggerRegisterPlayerEventLeave_Category=TC_PLAYER
-	// Item events
-		TriggerRegisterItemDeathEvent=0,item
-			_TriggerRegisterItemDeathEvent_Defaults=_
-			_TriggerRegisterItemDeathEvent_Category=TC_ITEM
-			_TriggerRegisterItemDeathEvent_ScriptName=TriggerRegisterDeathEvent
-	// Game events
-		TriggerRegisterGameStateEventTimeOfDay=0,limitop,real
-			_TriggerRegisterGameStateEventTimeOfDay_Defaults=LimitOpEqual,12
-			_TriggerRegisterGameStateEventTimeOfDay_Limits=_,_,0,24
-			_TriggerRegisterGameStateEventTimeOfDay_Category=TC_GAME
-		TriggerRegisterVariableEvent=0,VarAsString_Real,limitop,real
-		_TriggerRegisterVariableEvent_Defaults=_,LimitOpEqual,0
-		_TriggerRegisterVariableEvent_Category=TC_GAME
-		TriggerRegisterGameLoadedEventBJ=1,nothing
-			_TriggerRegisterGameLoadedEventBJ_Defaults=
-			_TriggerRegisterGameLoadedEventBJ_Category=TC_GAME
-		TriggerRegisterGameSavedEventBJ=1,nothing
-			_TriggerRegisterGameSavedEventBJ_Defaults=
-			_TriggerRegisterGameSavedEventBJ_Category=TC_GAME
-		TriggerRegisterShowSkillEventBJ=0,nothing
-			_TriggerRegisterShowSkillEventBJ_Defaults=
-			_TriggerRegisterShowSkillEventBJ_Category=TC_GAME
-		TriggerRegisterBuildSubmenuEventBJ=0,nothing
-			_TriggerRegisterBuildSubmenuEventBJ_Defaults=
-			_TriggerRegisterBuildSubmenuEventBJ_Category=TC_GAME
-		TriggerRegisterGameEvent=1,gameevent
-			_TriggerRegisterGameEvent_Defaults=GameEventTourneyNow
-			_TriggerRegisterGameEvent_Category=TC_GAME
+	// YD Event Trigger
+		YDWESyStemAnyUnitDamagedRegistTrigger=1
+			_YDWESyStemAnyUnitDamagedRegistTrigger_Defaults=
+			_YDWESyStemAnyUnitDamagedRegistTrigger_Category=TC_YD_EVENT
+		YDWESyStemItemUnmovableRegistTrigger=1
+			_YDWESyStemItemUnmovableRegistTrigger_Defaults=
+			_YDWESyStemItemUnmovableRegistTrigger_Category=TC_YD_EVENT
+		YDWESyStemItemCombineRegistTrigger=1
+			_YDWESyStemItemCombineRegistTrigger_Defaults=
+			_YDWESyStemItemCombineRegistTrigger_Category=TC_YD_EVENT
+		YDWESyStemAbilityCastingOverRegistTrigger=0,abilevent
+			_YDWESyStemAbilityCastingOverRegistTrigger_Defaults=abileventA
+			_YDWESyStemAbilityCastingOverRegistTrigger_Category=TC_YD_EVENT
 	// 逆天
 		YDWEDisableRegister=0,nothing
 			_YDWEDisableRegister_Defaults=
