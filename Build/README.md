@@ -4,8 +4,8 @@
 
 ### 第一次打包
 
-运行: Build_Launcher_Release.bat  
-生成XYWE的基础工具包，生成的工具会放到/Development/Editor/ComponentXYWE内
+使用VS2015打开Development/Launcher/XYWE.sln并用Release模式生成解决方案  
+会生成XYWE的基础工具包，生成的工具会被放到/Development/Editor/ComponentXYWE内
 
 运行: Build_Release.bat  
 生成内核，并将XYWE所有资源文件发布到/Build/publish/Release并用LazyPacker二次打包
@@ -19,7 +19,7 @@
 
 ### 重构XYWE基础工具并打包 ###
 
-Build_Launcher_Release.bat  
+使用VS2015打开Development/Launcher/XYWE.sln并用Release模式生成解决方案  
 重构XYWE的基础工具包
 
 Update_Release.bat  
@@ -28,10 +28,6 @@ Update_Release.bat
 完成以上步骤后再自动使用LazyPacker二次打包
 
 ## 文件说明
-
-### Build_Launcher_Release.bat ###
-
-* 生成XYWE外置工具及启动器到XYWE组件目录(/Development/Editor/ComponentXYWE)
 
 ### Build_Release.bat ###
 
